@@ -1,0 +1,6 @@
+label_class=set(label)
+key={key:value for key, value in zip(label_class,range(len(label_class)))}
+label_dict=torch.zeros(size=(len(label),len(label_class)))
+for idx, label in enumerate (label_dict):
+    label_dict[idx][key[label]=1
+label_dict=labels.to(device)
