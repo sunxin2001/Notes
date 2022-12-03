@@ -1,0 +1,14 @@
+import torch 
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+np.random.seed(123)
+data_size=1000
+dim=2
+classes=2
+x=np.random.randn(4,dim)
+print(x)
+print('---------------------------')
+y=np.random.randn(4,dim)/6
+print(y)
