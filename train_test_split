@@ -1,0 +1,22 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sb
+import random
+from pprint import pprint
+
+
+
+%matplotlib inline
+sb.set_style("darkgrid")
+
+def train_test_split(df,test_size):
+    if isinstance(test_size,float):
+        test_size=round(test_size*len(df))
+    indices=df.index.tolist()
+    test_indices=random.sample(indices,test_size)
+    test_df=df.loc[test_indices]
+    train_df=df.drop(test_indices)
+    
+    return train_df,test_df
+
