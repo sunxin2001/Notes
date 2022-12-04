@@ -1,0 +1,9 @@
+import numpy as np
+a = np.array([1, 2, 6, 4, 2, 3, 2])
+u, indices = np.unique(a, return_inverse=True)
+print(u)
+print(indices)
+index=indices.argmax()
+print(index)
+classification = u[index]
+print(classification)
